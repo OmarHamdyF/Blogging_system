@@ -1,0 +1,33 @@
+﻿@model List<BL.CategoryModel>
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/_Layout1.cshtml";
+}
+
+<h2>Leave Your Article</h2>
+
+@using (Html.BeginForm("AddArticle", "Home", FormMethod.Post, new { id = "multipart/form-data" }))
+{
+   
+
+    <select class="custom-select my-1 mr-sm-2" name="mycat" id="inlineFormCustomSelectPref">
+        @foreach (var item in Model)
+        {
+            <option value="@item.cat_id">@item.cat_name</option>
+        }
+    </select>
+    <div class="input-group input-group-lg" style="margin-top:30px;margin-bottom:30px;">
+        <div class="input-group-prepend" >
+            <span class="input-group-text" id="inputGroup-sizing-lg">Heading</span>
+        </div>
+        <input type="text" name="heading" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+    </div>
+    <div class="form-group">
+        <label for="comment">Your Article</label>
+        <textarea class="form-control" rows="5" name="article" id="comment"></textarea>
+    </div>
+
+    <input type="submit" value="Submit article" class="btn btn-dark" />
+
+}
+

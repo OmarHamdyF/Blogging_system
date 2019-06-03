@@ -1,0 +1,10 @@
+E:\ITI data\Blogging_System\BL\bin\Debug\BL.dll
+E:\ITI data\Blogging_System\BL\bin\Debug\BL.pdb
+E:\ITI data\Blogging_System\BL\bin\Debug\EntityFramework.SqlServer.dll
+E:\ITI data\Blogging_System\BL\bin\Debug\EntityFramework.dll
+E:\ITI data\Blogging_System\BL\bin\Debug\DAL.dll
+E:\ITI data\Blogging_System\BL\bin\Debug\DAL.pdb
+E:\ITI data\Blogging_System\BL\bin\Debug\DAL.dll.config
+E:\ITI data\Blogging_System\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+E:\ITI data\Blogging_System\BL\obj\Debug\BL.dll
+E:\ITI data\Blogging_System\BL\obj\Debug\BL.pdb

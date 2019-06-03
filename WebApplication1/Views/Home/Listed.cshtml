@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Listed";
+    Layout = "~/Views/_Layout1.cshtml";
+}
+
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                @foreach (var item in ViewBag.articles)
+                {
+                    <h2 class="section-heading">@item.article_heading</h2>
+
+                    <p>@item.article_body .</p>
+                   <hr />
+                   
+                }
+            </div>
+        </div>
+    </div>
+</article>
+
+
+

@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "SelectedCategory";
+    Layout = "~/Views/_Layout1.cshtml";
+}
+
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                @foreach (var item in ViewBag.articles)
+                {
+                    <h2 class="section-heading">@item.article_heading</h2>
+
+                    <p>@item.article_body .</p>
+                    <h5>Comments</h5>
+                    foreach (var cmt in ViewBag.comments)
+                    {
+                        if (cmt.article_id == item.article_id)
+                        {
+                            <p>@cmt.comment_body</p>
+                            <hr />
+                        }
+                    }
+
+
+                    using (Html.BeginForm("Comment", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        <input name="cat_id" value="@ViewBag.cat_id" style="display:none;" />
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Leave your comment..." name="comment" style="height:55px;">
+                            
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" name="id" value="@item.article_id" type="submit">Comment</button>
+                            </div>
+                        </div>
+
+                    }
+
+                    @Ajax.ActionLink("Add to list",
+                 "addToList", new { id = item.article_id },
+                 new AjaxOptions
+                 {
+                     UpdateTargetId = "CustomerList",
+                     InsertionMode = InsertionMode.Replace,
+                     HttpMethod = "GET"
+                 }, new { @class = "btn btn-info" })
+
+
+                }
+            </div>
+        </div>
+    </div>
+</article>
+<div id="CustomerList"></div>
+
