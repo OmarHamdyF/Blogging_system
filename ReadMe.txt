@@ -2,7 +2,7 @@ Blogging Task By Omar Hamdy
 
 1-install sql server 2014
 2-install visual studio 2017
-3-Restore Database file Blogging_system.bak by sql server 2014
+3-Restore Database file Blogging_system.sql by sql server 2014
 4-Open Bloggin_system.sln by visual studio 2017
 5-we have three layers in solution
  -DAL=>This layer contains database model
